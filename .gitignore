@@ -1,2 +1,4 @@
 node_modules/
 dist/main.js
+dist/icon.png
+dist/style.css

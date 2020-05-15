@@ -41,6 +41,7 @@ export const buildStatePage = async (statecode, stateData) => {
   }
 
   //Individual sections
+  console.log(districtArray);
   individualTable(districtArray, "District");
 
   let timeSeriesData = await getStateDailyData(statecode);

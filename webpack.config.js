@@ -1,5 +1,6 @@
 const path = require("path");
-let DashboardPlugin = require("webpack-dashboard/plugin");
+const DashboardPlugin = require("webpack-dashboard/plugin");
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
 module.exports = {
   mode: "development",
@@ -10,8 +11,8 @@ module.exports = {
   module: {
     rules: [
       {
-        test: /\.css$/,
-        use: ['style-loader', 'css-loader'],
+        test: /\.css$/i,
+        use: [MiniCssExtractPlugin.loader, 'css-loader'],
       }
     ]
   },
@@ -20,7 +21,11 @@ module.exports = {
     port: 8081,
   },
   plugins: [
-      new DashboardPlugin({ port: 8081 }),
+      new DashboardPlugin(),
+      new MiniCssExtractPlugin({
+        filename: 'style.css',
+        chunkFilename: 'chunk.css',
+      }),
   ],
   output: {
     filename: "main.js",
