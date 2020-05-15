@@ -1,0 +1,19 @@
+.confirmedCases{
+    color: red;
+}
+
+.activeCases{
+    color: blue;
+}
+
+.recoveredCases{
+    color: green;
+}
+
+.deceasedCases{
+    color: black;
+}
+
+.pointerHover :hover{
+    cursor: pointer;
+}

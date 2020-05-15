@@ -1,28 +1,49 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous"> -->
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>COVID-19 vs India</title>
-</head>
-<body>
-
-    <h1 id="heading"></h1>
-    <div id="temporary"></div>
-    <table id="total">
-    </table>
-    <table id="individual"></table>
-    
-    <div id="confirmedChart" style="width: 900px; height: 500px"></div>
-    <div id="activeChart" style="width: 900px; height: 500px"></div>
-    <div id="recoveredChart" style="width: 900px; height: 500px"></div>
-    <div id="deceasedChart" style="width: 900px; height: 500px"></div>
-    
-    <!-- <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script> -->
-    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+  </head>
+  <body>
+    <nav class="navbar navbar-light bg-secondary">
+      <h1
+        id="heading"
+        style="
+          margin-left: 10%;
+          margin-top: 10px;
+          margin-bottom: 10px;
+          color: white;
+          font-size: 50px;
+        "
+      ></h1>
+    </nav>
+    <div class="container mt-5 mb-5">
+      <div class="row">
+        <div class="col-7">
+          <div id="temporary"></div>
+          <table
+            id="total"
+            class="table table-hover table-bordered table-lg mt-4 mb-4 table-responsive-lg"
+          ></table>
+          <table
+            id="individual"
+            class="table table-hover table-bordered table-sm mt-4 mb-4 table-responsive-sm"
+          ></table>
+        </div>
+        <div class="col-3">
+          <div id="confirmedChart" style="width: 450px; height: 350px;"></div>
+          <div id="activeChart" style="width: 450px; height: 350px;"></div>
+          <div id="recoveredChart" style="width: 450px; height: 350px;"></div>
+          <div id="deceasedChart" style="width: 450px; height: 350px;"></div>
+        </div>
+      </div>
+    </div>
+    <nav class="navbar navbar-light bg-secondary" style="height: 50px;"></nav>
+    <script
+      type="text/javascript"
+      src="https://www.gstatic.com/charts/loader.js"
+    ></script>
     <script src="main.js"></script>
-</body>
+  </body>
 </html>

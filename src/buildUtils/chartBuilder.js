@@ -27,6 +27,7 @@ export const chartBuilder = (chartId, dataPoints, title) => {
           },
           legend: { position: 'none' },
           colors: [getColor(title)],
+          backgroundColor: '#FDFDFE',
         };
 
         var chart = new google.visualization.LineChart(document.getElementById(chartId));

@@ -7,10 +7,12 @@ import { chartBuilder } from "../buildUtils/chartBuilder";
 
 export const buildStatePage = async (statecode, stateData) => {
   let data = await getStateData(statecode);
-
+  window.scrollTo(0,0);
   //Back Button
   const buttonEl = document.createElement("button");
   buttonEl.textContent = "Back";
+  buttonEl.className = "btn btn-secondary btn-md mt-2";
+  buttonEl.style.width = '80px';
   buttonEl.addEventListener("click", () => {
     location.reload();
   });

@@ -1,4 +1,7 @@
-// import 'bootstrap/dist/css/bootstrap.min.css';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import 'jquery/dist/jquery.slim';
+import 'popper.js';
+import './css/app.css';
 import { buildHomePage } from "./pages/homePage";
 import { buildStatePage } from './pages/statePage';
 
@@ -28,9 +31,3 @@ export const individualStateEvent = (e) => {
         console.log(err);
     })
 }
-
-// Both pages have 4 sections 
-// Header
-// Total Table
-// Individual Table
-// 4 Graphs

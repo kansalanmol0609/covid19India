@@ -6,7 +6,7 @@ export const totalTable = data => {
     const headingsArray = ["Confirmed", "Active", "Recovered", "Deceased"];
     totalTableEl.appendChild(getHeadingsRow(headingsArray));
 
-    const changeArray = [data["dailyconfirmed"], "", data["dailyrecovered"], data["dailydeceased"]];
+    const changeArray = [`[${data["dailyconfirmed"]}]`, "-", `[${data["dailyrecovered"]}]`, `[${data["dailydeceased"]}]`];
     totalTableEl.appendChild(getIndividualRow(changeArray));
 
     const totalActive = +data["totalconfirmed"] - +data["totalrecovered"] - +data["totaldeceased"];
